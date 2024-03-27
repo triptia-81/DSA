@@ -7,6 +7,7 @@ import java.util.List;
 
 public class LeadersInArray {
 
+	// Function to find the leaders in an array in primitive format.
 	public static int[] findLeadersInPrimitiveFormat(int[] arr) {
 		
 		List<Integer> leaders = new ArrayList<Integer>();
