@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+// https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
+// https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
+
 public class LeadersInArray {
 
 	// Function to find the leaders in an array in primitive format.
@@ -17,9 +20,9 @@ public class LeadersInArray {
 			
 			for (int i = arr.length - 2; i >= 0; --i) {
 				if (arr[i] > max) {
-					leaders.add(arr[i]);
+					max = arr[i];
+					leaders.add(max);
 				}
-				max = Math.max(max, arr[i]);
 			}
 		}
 		Collections.reverse(leaders);
@@ -35,9 +38,9 @@ public class LeadersInArray {
 			leaders.add(max);
 			for (int i = arr.length - 2; i >= 0; i--) {
 				if (arr[i] >= max) {
-					leaders.add(arr[i]);
+					max = arr[i];
+					leaders.add(max);
 				}
-				max = Math.max(max, arr[i]);
 			}
 			Collections.reverse(leaders);
 		}
